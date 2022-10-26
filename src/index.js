@@ -725,6 +725,7 @@ class LessonSelectionDisplay extends React.Component {
                 <div><button onClick={this.handleClickLesson} name='LESSON_COMPUTERS'>Digital</button></div>
                 <div><button onClick={this.handleClickLesson} name='LESSON_WORLD'>The World</button></div>
                 <div><button onClick={this.handleClickLesson} name='LESSON_GENERAL'>General Conversations</button></div>
+                <div><button onClick={this.handleClickLesson} name='LESSON_GREETINGS'>Greetings</button></div>
             </div>
         );
     }
@@ -911,6 +912,14 @@ const GEQ6 = new WritingTranslationQuestion('I live in The Netherlands', 'Mē wo
 const GEQ7 = new MCVocabularyQuestion('I live in Germany', ['Mē woone Germaan', 'Mē woone Germenn', 'Mē woone G†mas', 'Me woone Austerē'], 1, true);
 const GEQ8 = new AssemblingTranslationQuestion('I live in Austria', ['Źe', 'Þomputadoll', 'woone', 'Mē', 'amaz', 'pofa', 'Se', 'Austerē'], 'Mē woone Austerē.');
 // end GENERAL CONVERSATIONS
+// greetings
+const GQQ1 = new MCVocabularyQuestion('Welcome', ['Willkome', 'Hallo', 'Hanya', 'Germaan'], 1);
+const GQQ2 = new AssemblingTranslationQuestion('Welcome, Milan.', ['Willkome', 'se', 'Źe', 'Milan', 'Frank', 'Mark'], 'Willkome Milan.');
+const GQQ3 = new MCVocabularyQuestion('Hello!', ['Henlo!', 'Hello!', 'Germaan!', 'Hallo!'], 4);
+const GQQ4 = new MCVocabularyQuestion('Sorry', ['Hanya', 'Sorry', 'Þomputadoll', 'Cwen'], 2);
+const GQQ5 = new MCVocabularyQuestion('Mē n†d c†dre, pofa.', ['I want milk, please.', 'I need milk, please.', 'I do not want milk, please.', 'What is milk?'], 1, true);
+const GQQ6 = new AssemblingTranslationQuestion('I am going to the toilet.', ['Mē', 'gonne', 'źe', 'toilette', 'neh', 'je', 'se'], 'Mē gonne źe toilette.');
+// end GREETINGS
 const LESSON_SIMPLE = new LessonInformation('Simple Words', [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6]);
 const LESSON_PEOPLE = new LessonInformation('Family', [PQ1, PQ2, PQ3, PQ4, PQ5, PQ6]);
 const LESSON_SIMPLE_SENTENCES = new LessonInformation('Simple Sentences', [SEQ1, SEQ2, SEQ3, SEQ4, SEQ5, SEQ6, SEQ7]);
@@ -922,6 +931,7 @@ const LESSON_SIMPLE_THREE = new LessonInformation('Simple Words 3', [S3Q1, S3Q2,
 const LESSON_COMPUTERS = new LessonInformation('Digital', [DQ1, DQ2, DQ3, DQ4, DQ5, DQ6, DQ7, DQ8]);
 const LESSON_WORLD = new LessonInformation('The World', [WQ1, WQ2, WQ3, WQ4]);
 const LESSON_GENERAL = new LessonInformation('General Conversations', [GEQ1, GEQ2, GEQ3, GEQ4, GEQ5, GEQ6, GEQ7, GEQ8]);
+const LESSON_GREETINGS = new LessonInformation('Greetings', [GQQ1, GQQ2, GQQ3, GQQ4, GQQ5, GQQ1, GQQ6]);
 var CURRENT_LESSON = new LessonInformation('NULL', []);
 ReactDOM.render(
     <AppDisplay />,
