@@ -726,6 +726,7 @@ class LessonSelectionDisplay extends React.Component {
                 <div><button onClick={this.handleClickLesson} name='LESSON_WORLD'>The World</button></div>
                 <div><button onClick={this.handleClickLesson} name='LESSON_GENERAL'>General Conversations</button></div>
                 <div><button onClick={this.handleClickLesson} name='LESSON_GREETINGS'>Greetings</button></div>
+                <div><button onClick={this.handleClickLesson} name='LESSON_INTRODUCE'>Introduce</button></div>
             </div>
         );
     }
@@ -920,6 +921,18 @@ const GQQ4 = new MCVocabularyQuestion('Sorry', ['Hanya', 'Sorry', 'Þomputadoll'
 const GQQ5 = new MCVocabularyQuestion('Mē n†d c†dre, pofa.', ['I want milk, please.', 'I need milk, please.', 'I do not want milk, please.', 'What is milk?'], 1, true);
 const GQQ6 = new AssemblingTranslationQuestion('I am going to the toilet.', ['Mē', 'gonne', 'źe', 'toilette', 'neh', 'je', 'se'], 'Mē gonne źe toilette.');
 // end GREETINGS
+// greetings
+const IQQ1 = new MCVocabularyQuestion('I am Milan', ['Mē nym equ Milan', 'Mē nym is Milan', 'Mē Milan', 'Soy Milan'], 1);
+const IQQ2 = new AssemblingTranslationQuestion('Hello, I am Frank!', ['Willkome', 'Hallo', 'Źe', 'nym', 'Frank', 'Mē', ',', '!', 'equ'], 'Hallo , Mē nym equ Frank !.');
+const IQQ3 = new MCVocabularyQuestion('Hello!', ['Henlo!', 'Hello!', 'Germaan!', 'Hallo!'], 4);
+const IQQ4 = new MCVocabularyQuestion('I am new here.', ['Mē nieuw ah†re', 'Mē ah†re', 'Þu nieuw ah†re', 'Cwen mē ah†re'], 1);
+const IQQ5 = new MCVocabularyQuestion('You are a man.', ['Þu qi g†mas', 'Þu qi germenn', 'C†dre, pofa.', 'Equ germenn'], 2, true);
+const IQQ6 = new MCVocabularyQuestion('You are a woman.', ['Þu qi womannes.', 'Þu qi g†mas.', 'Toilette, pofa.', 'Þu qi c†dre.'], 2, true);
+const IQQ7 = new AssemblingTranslationQuestion('I am going to The Netherlands.', ['Mē', 'gonne', 'Se', 'toilette', 'Nedderlends', 'je', 'se'], 'Mē gonne Se Nedderlends.');
+const IQQ8 = new PairsQuestion(['toilet', 'man', 'woman', 'hello', 'I'], ['toilette', 'germenn', 'g†mas', 'hallo', 'mē'],
+    new Map([['toilet', 'toilette'], ['man', 'germenn'], ['woman', 'g†mas'], ['hello', 'hallo'], ['I', 'mē']]));
+const IQQ9 = new MCVocabularyQuestion('I am a human.', ['Mē equ humen.', 'Mē equ c†dre.', 'Þu nieuw c†dre.', 'Mē equ mens.'], 4);
+// end GREETINGS
 const LESSON_SIMPLE = new LessonInformation('Simple Words', [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6]);
 const LESSON_PEOPLE = new LessonInformation('Family', [PQ1, PQ2, PQ3, PQ4, PQ5, PQ6]);
 const LESSON_SIMPLE_SENTENCES = new LessonInformation('Simple Sentences', [SEQ1, SEQ2, SEQ3, SEQ4, SEQ5, SEQ6, SEQ7]);
@@ -932,6 +945,7 @@ const LESSON_COMPUTERS = new LessonInformation('Digital', [DQ1, DQ2, DQ3, DQ4, D
 const LESSON_WORLD = new LessonInformation('The World', [WQ1, WQ2, WQ3, WQ4]);
 const LESSON_GENERAL = new LessonInformation('General Conversations', [GEQ1, GEQ2, GEQ3, GEQ4, GEQ5, GEQ6, GEQ7, GEQ8]);
 const LESSON_GREETINGS = new LessonInformation('Greetings', [GQQ1, GQQ2, GQQ3, GQQ4, GQQ5, GQQ1, GQQ6]);
+const LESSON_INTRODUCE = new LessonInformation('Introduce', [IQQ1, IQQ2, IQQ3, IQQ4, IQQ5, IQQ6, IQQ7, IQQ8, IQQ9]);
 var CURRENT_LESSON = new LessonInformation('NULL', []);
 ReactDOM.render(
     <AppDisplay />,
